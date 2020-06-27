@@ -41,7 +41,7 @@ namespace TestRoulette.Api.Services
             {
                 throw new NotAllowedOpenException();
             }
-            roulette.OpenedAt = DateTime.Now;
+            roulette.OpenedAt = DateTime.UtcNow;
             roulette.IsOpen = true;
 
             return _rouletteRepository.Update(Id, roulette);
@@ -57,7 +57,7 @@ namespace TestRoulette.Api.Services
             {
                 throw new NotAllowedClosedException();
             }
-            roulette.ClosedAt = DateTime.Now;
+            roulette.ClosedAt = DateTime.UtcNow;
             roulette.IsOpen = false;
 
             return _rouletteRepository.Update(Id, roulette);
