@@ -42,6 +42,7 @@ namespace TestRoulette.Api.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e);
+
                 return StatusCode(405);
             }
         }
