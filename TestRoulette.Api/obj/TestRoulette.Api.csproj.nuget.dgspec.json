@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luilly David\\Desktop\\Masivian\\TestRoulette\\TestRoulette.Api\\TestRoulette.Api.csproj": {}
+    "C:\\Users\\Luilly David\\Desktop\\Masivian\\roulette\\TestRoulette.Api\\TestRoulette.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luilly David\\Desktop\\Masivian\\TestRoulette\\TestRoulette.Api\\TestRoulette.Api.csproj": {
+    "C:\\Users\\Luilly David\\Desktop\\Masivian\\roulette\\TestRoulette.Api\\TestRoulette.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luilly David\\Desktop\\Masivian\\TestRoulette\\TestRoulette.Api\\TestRoulette.Api.csproj",
+        "projectUniqueName": "C:\\Users\\Luilly David\\Desktop\\Masivian\\roulette\\TestRoulette.Api\\TestRoulette.Api.csproj",
         "projectName": "TestRoulette.Api",
-        "projectPath": "C:\\Users\\Luilly David\\Desktop\\Masivian\\TestRoulette\\TestRoulette.Api\\TestRoulette.Api.csproj",
+        "projectPath": "C:\\Users\\Luilly David\\Desktop\\Masivian\\roulette\\TestRoulette.Api\\TestRoulette.Api.csproj",
         "packagesPath": "C:\\Users\\Luilly David\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luilly David\\Desktop\\Masivian\\TestRoulette\\TestRoulette.Api\\obj\\",
+        "outputPath": "C:\\Users\\Luilly David\\Desktop\\Masivian\\roulette\\TestRoulette.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
