@@ -3,34 +3,28 @@ using Microsoft.AspNetCore.Mvc;
 using TestRoulette.Api.Interfaces;
 using TestRoulette.Api.Models;
 using TestRoulette.Api.Models;
-
 namespace TestRoulette.Api.Controllers
-
 {
     [ApiController]
     [Route("api/[controller]")]
     public class RouletteController : Controller
     {
         private IRouletteService _rouletteService;
-
         public RouletteController(IRouletteService rouletteService)
         {
             _rouletteService = rouletteService;
         }
-
         [HttpPost("[action]")]
-        public IActionResult NewRulette()
+        public IActionResult CreateRulette()
         {
             Roulette roulette = _rouletteService.Create();
             return Ok(new { id = roulette.Id });
         }
-
         [HttpGet("[action]")]
         public IActionResult GetAll()
         {
             return Ok(_rouletteService.GetAll());
         }
-
         [HttpPut("[action]/{id}")]
         public IActionResult OpenRoulette([FromRoute(Name = "id")] string id)
         {
@@ -42,11 +36,9 @@ namespace TestRoulette.Api.Controllers
             catch (Exception e)
             {
                 Console.WriteLine(e);
-
                 return StatusCode(405);
             }
         }
-
         [HttpPut("[action]/{id}")]
         public IActionResult CloseRoulette([FromRoute(Name = "id")] string id)
         {
@@ -61,10 +53,8 @@ namespace TestRoulette.Api.Controllers
                 return StatusCode(405);
             }
         }
-
-        [HttpPost("[action]/{id}")]
-        public IActionResult Bet([FromHeader(Name = "user-id")] string UserId, [FromRoute(Name = "id")] string id,
-            [FromBody] Bet request)
+        [HttpPost("[action]")]
+        public IActionResult CreateBet([FromHeader(Name = "IdUser")] string IdUser, Bet bet)
         {
             if (!ModelState.IsValid)
             {
@@ -76,7 +66,7 @@ namespace TestRoulette.Api.Controllers
             }
             try
             {
-                Roulette roulette = _rouletteService.Bet(id, UserId, request.position, request.money);
+                Roulette roulette = _rouletteService.CreateBet(IdUser,bet);
                 return Ok(roulette);
             }
             catch (Exception e)

@@ -14,7 +14,10 @@
       "launchBrowser": true,
       "launchUrl": "swagger/index.html",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "portRedis": "6379",
+        "cacheHost": "localhost",
+        "Connection": "roulet"
       }
     },
     "TestRoulette.Api": {
@@ -22,7 +25,10 @@
       "launchBrowser": true,
       "launchUrl": "weatherforecast",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "portRedis": "6379",
+        "cacheHost": "localhost",
+        "Connection": "roulet"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
     }
